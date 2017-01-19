@@ -1,4 +1,17 @@
-# An issue with AoT Compiling with code splitting and lazy loading
+## An issue with AoT Compiling with code splitting and lazy loading
+
+### Update
+
+Solved! Thanks to [Brandon Roberts](https://github.com/brandonroberts) for pointing out that the problem was caused by this in the webpack config:
+```
+new CommonsChunkPlugin({
+      async: true
+    })
+```
+
+When I removed that, everything worked as intended.
+
+## Original Readme
 
 This repository demonstrates an issue with AoT compiling, code splitting and lazy loading with @ngtools/webpack.
 
