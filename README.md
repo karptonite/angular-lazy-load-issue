@@ -8,6 +8,6 @@ In the first commit, which works, a moduler called SharedModule is imported a mo
 
 In the second commit, the SharedModule is also imported by the SubscriptionsModule, a module that is used to lazy load the subscriptions component.
 
-However, the code for the SharedModule is split out into its own bundle, one that is not loaded with the main page, causing an error, `bootstrap 7eb915a…:52Uncaught TypeError: Cannot read property 'call' of undefined at __webpack_require__`
+However, the code for the SharedModule is split out into its own bundle, one that is not loaded with the main page, causing an error, `Uncaught TypeError: Cannot read property 'call' of undefined at __webpack_require__`
 
 This example is based on the useful example of adding code splitting to an Angular project, here: https://github.com/vsavkin/router_lazyloading
